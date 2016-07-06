@@ -18,7 +18,6 @@ import net.minecraft.util.text.TextFormatting;
 
 public class LiteModPopEnchantTagsRevived implements HUDRenderListener, Tickable
 {
-    //private static LiteModPopEnchantTagsRevived instance;
     public static float remainingHighlightTicks;
     public static ItemStack highlightingItemStack;
     public static long ticks;
@@ -27,7 +26,6 @@ public class LiteModPopEnchantTagsRevived implements HUDRenderListener, Tickable
 
     public LiteModPopEnchantTagsRevived()
     {
-        //instance = this;
         remainingHighlightTicks = -1.0F;
         highlightingItemStack = null;
         ticks = 0L;
@@ -42,7 +40,7 @@ public class LiteModPopEnchantTagsRevived implements HUDRenderListener, Tickable
     @Override
 	public String getVersion()
     {
-        return "1.0.2";
+        return "1.0.3";
     }
 
     @Override
