@@ -18,13 +18,13 @@ buildscript {
 
 apply plugin: 'net.minecraftforge.gradle.liteloader'
 
-version = "1.0.3"
+version = "1.1"
 group = "com.shadowhawk" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "PopEnchantTagsRevised"
 
 minecraft {
     version = "1.10.2"
-    mappings = "snapshot_20160705"
+    mappings = "snapshot_20160722"
     runDir = "run"
 }
 
@@ -32,6 +32,7 @@ litemod {
     json {
         name = "PopEnchantTagsRevived"
         author = "Shadow_Hawk"
+        description = "An Enchantment Popup Mod!\n-In-game toggle via config panel and keybind\n-Enchanted Book support added and independently toggleable\n-Long lists of enchants now on multiple lines!\n"
         mcversion = "1.10.r1"
     }
 }

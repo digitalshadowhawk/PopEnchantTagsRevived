@@ -1,8 +1,8 @@
 {
     "name": "PopEnchantTagsRevived",
-    "version": "1.0.2",
-    "mcversion": "1.9.4",
+    "version": "1.10.r1",
+    "mcversion": "1.10.2",
     "revision": "1",
     "author": "Shadow_Hawk",
-    "description": ""
+    "description": "An Enchantment Popup Mod!\n-In-game toggle coming soon!\n-Multi-Line support coming soon!\n-Enchanted Book support coming soon!"
 }
