@@ -47,7 +47,7 @@ public class LiteModPopEnchantTagsRevived implements HUDRenderListener, Tickable
     @Override
 	public String getVersion()
     {
-        return "1.1";
+        return "1.1.1";
     }
 
     @Override

@@ -117,8 +117,8 @@ public class PopEnchantTagsRenderer {
                     		short enchantmentId = tagList.getCompoundTagAt(fontRenderer).getShort("id");
                     		short enchantmentLevel = tagList.getCompoundTagAt(fontRenderer).getShort("lvl");
                     		testString = testString + (testString != "" ? " " : "");
-                    		//testString = testString + Enchantment.getEnchantmentByID(enchantmentId).getTranslatedName(enchantmentLevel);
                     		testString = testString + Enchantment.getEnchantmentById(enchantmentId).getTranslatedName(enchantmentLevel);
+                    		//testString = testString + Enchantment.getEnchantmentById(enchantmentId).getTranslatedName(enchantmentLevel);
                     	}
                     	entriesPerLine = (int)Math.ceil(tagList.tagCount()/lines);
                     	
@@ -157,10 +157,16 @@ public class PopEnchantTagsRenderer {
 
                     	int[] x = {0, 0, 0, 0};
                     	int[] y = {0, 0, 0, 0};
+                    	int j = 0;
+                    	//if(Minecraft.getMinecraft().theWorld.getWorldInfo().getGameType() == GameType.SURVIVAL || Minecraft.getMinecraft().theWorld.getWorldInfo().getGameType() == GameType.ADVENTURE)
+                    	if(Minecraft.getMinecraft().playerController.isNotCreative())
+                    	{
+                    		j = 1;
+                    	}
                     	for(int i = 0; i <= 3; i++){
                         	displayStrings[i] = color + displayStrings[i];
                         	x[i] = (screenWidth - var13.getStringWidth(displayStrings[i])) / 2;
-                        	y[i] = screenHeight - 59 - (14 * i);
+                        	y[i] = screenHeight - 59 - (14 * (i + j));
                         }
 
                         GlStateManager.pushMatrix();
