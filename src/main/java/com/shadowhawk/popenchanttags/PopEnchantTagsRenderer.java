@@ -60,9 +60,9 @@ public class PopEnchantTagsRenderer {
 	{
 		Minecraft mc = Minecraft.getMinecraft();
 
-        if (mc.thePlayer != null && (enabled || showBooks))
+        if (mc.player != null && (enabled || showBooks))
         {
-            ItemStack items = mc.thePlayer.inventory.getCurrentItem();
+            ItemStack items = mc.player.inventory.getCurrentItem();
 
             if (items != null && items.hasTagCompound())
             {
@@ -117,7 +117,7 @@ public class PopEnchantTagsRenderer {
                     		short enchantmentId = tagList.getCompoundTagAt(fontRenderer).getShort("id");
                     		short enchantmentLevel = tagList.getCompoundTagAt(fontRenderer).getShort("lvl");
                     		testString = testString + (testString != "" ? " " : "");
-                    		testString = testString + Enchantment.getEnchantmentById(enchantmentId).getTranslatedName(enchantmentLevel);
+                    		testString = testString + Enchantment.getEnchantmentByID(enchantmentId).getTranslatedName(enchantmentLevel);
                     		//testString = testString + Enchantment.getEnchantmentById(enchantmentId).getTranslatedName(enchantmentLevel);
                     	}
                     	entriesPerLine = (int)Math.ceil(tagList.tagCount()/lines);
@@ -150,7 +150,7 @@ public class PopEnchantTagsRenderer {
                             	}
                         	}
                             displayStrings[currentLine] = displayStrings[currentLine] + (displayStrings[currentLine] != "" ? " " : "");
-                            displayStrings[currentLine] = displayStrings[currentLine] + Enchantment.getEnchantmentById(enchantmentId).getTranslatedName(enchantmentLevel);
+                            displayStrings[currentLine] = displayStrings[currentLine] + Enchantment.getEnchantmentByID(enchantmentId).getTranslatedName(enchantmentLevel);
                             enchantCount++;
                             currentLine = 0;
                         }	
@@ -185,9 +185,9 @@ public class PopEnchantTagsRenderer {
 	
 	public void tick(Minecraft minecraft, float partialTicks, boolean inGame, boolean clock)
 	{
-		if (inGame && minecraft.thePlayer != null && clock)
+		if (inGame && minecraft.player != null && clock)
         {
-            ItemStack items = minecraft.thePlayer.inventory.getCurrentItem();
+            ItemStack items = minecraft.player.inventory.getCurrentItem();
 
             if (items == null)
             {
