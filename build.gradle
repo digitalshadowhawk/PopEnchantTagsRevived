@@ -23,8 +23,8 @@ group = "com.shadowhawk" // http://maven.apache.org/guides/mini/guide-naming-con
 archivesBaseName = "PopEnchantTagsRevised"
 
 minecraft {
-    version = "1.11"
-    mappings = "snapshot_20161116" //22 = 1.8.9, 24 = 1.9, 26 = 1.9.4, snapshot = 1.10.x
+    version = "1.11.2"
+    mappings = "snapshot_20161224" //22 = 1.8.9, 24 = 1.9, 26 = 1.9.4, snapshot = 1.10.x
     runDir = "run"
 }
 
@@ -33,7 +33,7 @@ litemod {
         name = "PopEnchantTagsRevived"
         author = "Shadow_Hawk"
         description = "An Enchantment Popup Mod!\n-In-game toggle via config panel and keybind\n-Enchanted Book support added and independently toggleable\n-Long lists of enchants now on multiple lines!\n"
-        mcversion = "1.11"
+        mcversion = "1.11.r2"
     }
 }
 
