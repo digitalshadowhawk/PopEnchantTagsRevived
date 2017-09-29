@@ -58,8 +58,8 @@ public class ConfigPopEnchantTags implements ConfigPanel{
 
 	@Override
 	public void drawPanel(ConfigPanelHost host, int mouseX, int mouseY, float partialTicks) {
-		toggleTags.drawButton(minecraft, mouseX, mouseY);
-		toggleBooks.drawButton(minecraft, mouseX, mouseY);
+		toggleTags.drawButton(minecraft, mouseX, mouseY, partialTicks);
+		toggleBooks.drawButton(minecraft, mouseX, mouseY, partialTicks);
 		//toggleApplicable.drawButton(minecraft, mouseX, mouseY);
 	}
 

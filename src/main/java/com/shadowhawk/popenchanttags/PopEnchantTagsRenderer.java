@@ -106,7 +106,7 @@ public class PopEnchantTagsRenderer {
 
                     if (!hidden && tagList != null)
                     {
-                    	FontRenderer var13 = mc.fontRendererObj;
+                    	FontRenderer var13 = mc.fontRenderer;
                     	for (int fontRenderer = 0; fontRenderer < tagList.tagCount(); ++fontRenderer)
                     	{
                     		if(var13.getStringWidth(testString) > screenWidth - 120)
